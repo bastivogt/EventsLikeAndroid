@@ -15,14 +15,14 @@ class Counter(start: Int = 0, end: Int = 10, step: Int = 1) {
 
 
 
-    var onCounterStart: ((source: Counter, count: Int)->Unit)? = null
+    var onCounterStart: ((source: Counter, count: Int) -> Unit)? = null
         protected set
-    var onCounterChange: ((source: Counter, count: Int)->Unit)? = null
+    var onCounterChange: ((source: Counter, count: Int) -> Unit)? = null
         protected set
-    var onCounterFinish: ((source: Counter, count: Int)->Unit)? = null
+    var onCounterFinish: ((source: Counter, count: Int) -> Unit)? = null
         protected set
 
-    fun setOnCounterStartListener(listener: ((source: Counter, count: Int)->Unit)) {
+    fun setOnCounterStartListener(listener: ((source: Counter, count: Int) -> Unit)) {
         onCounterStart = listener
     }
     fun removeOnCounterStartListener() {
@@ -31,7 +31,7 @@ class Counter(start: Int = 0, end: Int = 10, step: Int = 1) {
 
 
 
-    fun setOnCounterChangeListener(listener: ((source: Counter, count: Int)->Unit)) {
+    fun setOnCounterChangeListener(listener: ((source: Counter, count: Int) -> Unit)) {
         onCounterChange = listener
     }
     fun removeOnCounterChangeListener() {
@@ -41,7 +41,7 @@ class Counter(start: Int = 0, end: Int = 10, step: Int = 1) {
 
 
 
-    fun setOnCounterFinishListener(listener: ((source: Counter, count: Int)->Unit)) {
+    fun setOnCounterFinishListener(listener: ((source: Counter, count: Int) -> Unit)) {
         onCounterFinish = listener
     }
     fun removeonCounterFinishListener() {

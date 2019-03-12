@@ -52,7 +52,6 @@ class Counter(start: Int = 0, end: Int = 10, step: Int = 1) {
 
     protected fun notifyOnCounterStart(source: Counter, count: Int) {
         if(onCounterStart != null) {
-            //onCounterStart!!.invoke()
             onCounterStart!!(source, count)
         }
 
@@ -61,14 +60,12 @@ class Counter(start: Int = 0, end: Int = 10, step: Int = 1) {
 
     protected fun notifyOnCounterChange(source: Counter, count: Int) {
         if(onCounterChange != null) {
-            //onCounterChange!!.invoke()
             onCounterChange!!(source, count)
         }
     }
 
     protected fun notifyOnCounterFinish(source: Counter, count: Int) {
         if(onCounterFinish != null) {
-            //onCounterFinish!!.invoke()
             onCounterFinish!!(source, count)
         }
     }
@@ -78,7 +75,6 @@ class Counter(start: Int = 0, end: Int = 10, step: Int = 1) {
 
 
     fun run() {
-        //println("start")
         notifyOnCounterStart(this, count)
         for(i: Int in start..end) {
             count = i

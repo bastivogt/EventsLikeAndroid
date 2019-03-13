@@ -5,8 +5,11 @@ fun main(args: Array<String>) {
 
     val counter = Counter()
 
+    //counter.setOnCounterStartListener(::onStart)
+
     counter.setOnCounterStartListener { source, count ->
         println("counterStart, sount: $count")
+        //source.removeOnCounterChangeListener()
     }
 
     counter.setOnCounterChangeListener { source, count ->
@@ -18,4 +21,8 @@ fun main(args: Array<String>) {
     }
 
     counter.run()
+}
+
+fun onStart(source: Counter, count: Int) {
+    println("onStart count: $count")
 }

@@ -51,23 +51,16 @@ class Counter(start: Int = 0, end: Int = 10, step: Int = 1) {
 
 
     protected fun notifyOnCounterStart(source: Counter, count: Int) {
-        if(onCounterStart != null) {
-            onCounterStart!!(source, count)
-        }
-
+        onCounterStart?.invoke(source, count)
     }
 
 
     protected fun notifyOnCounterChange(source: Counter, count: Int) {
-        if(onCounterChange != null) {
-            onCounterChange!!(source, count)
-        }
+        onCounterChange?.invoke(source, count)
     }
 
     protected fun notifyOnCounterFinish(source: Counter, count: Int) {
-        if(onCounterFinish != null) {
-            onCounterFinish!!(source, count)
-        }
+        onCounterFinish?.invoke(source, count)
     }
 
 
